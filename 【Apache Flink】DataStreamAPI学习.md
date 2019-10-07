@@ -20,7 +20,7 @@
 #### API操作概览
 + 基于单条记录
     - filter
-    - map
+    - map 
 + 基于窗口 例：一段时间的数据
     - window
 + 合并多条流
@@ -29,6 +29,12 @@
     - connect
 + 拆分单条流
     - split (旁路输出？)
+
+#### API操作概览2
++ DataStream->DataStream
+    - map
+    - flatmap
+    - filter
 
 #### DataStream基本转换
 
@@ -44,7 +50,7 @@
 
 ![](images/2019-10-05-09-52-43.png)
 
-+ 物理分组
++ 物理分组-Partition 分区
     - global() 全部发往下游的第一个Task
     - broadcast() 把算子A的数据复制多份发往B的所有Task
     - forward() 一对一
